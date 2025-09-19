@@ -1,0 +1,28 @@
+class stud:
+    def __init__(self, a, s, d):
+        self.sname = a
+        self.sno = s
+        self.age = d
+
+    def display(self):
+        print("student name:", self.sname)
+        print("student no:", self.sno)
+        print("student age:", self.age)
+
+
+class marks(stud):
+    def __init__(self, a, s, d, mark1, mark2, mark3):
+        super().__init__(a, s, d)
+        self.mark1 = mark1
+        self.mark2 = mark2
+        self.mark3 = mark3
+
+    def display(self):
+        super().display()
+        print("mark1 =", self.mark1)
+        print("mark2 =", self.mark2)
+        print("mark3 =", self.mark3)
+
+
+obj = marks("Lalitha", "ASD123", 20, 88, 90, 95)
+obj.display()
